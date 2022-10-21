@@ -3,7 +3,8 @@ var bodyParser = require('body-parser');
 //const database=require("./database/database.local");
 //middleware - irá fazer um parser do dados do front e formatar em req.body
 var app=express();
-const PORT=3000;
+//const PORT=3000;
+const port = process.env.PORT || 3000
 //define o uso do body parser
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
